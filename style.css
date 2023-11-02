@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+:root {
+  font-size: 62.5%
+  
+
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0px;
+  border: none;
+  appearance: none;
+}
+
+body, * {
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  display: grid;
+  place-content: center;
+
+  height: 100vh;
+}
+
+.flex {
+  display: flex;
+}
+
+#app {
+  align-items: center;
+  gap: 19.2rem;
+}
+
+#timer span{
+  color: #323238;
+  font-size: 12.6rem;
+  font-weight: 500;
+}
+
+
+#sounds {
+  display: grid;
+  grid-template-areas:
+  'forest rain'
+  'coffeShop fireplace';
+  gap: 3.2rem;
+}
+
+#controls {
+  justify-content: space-between;
+}
+
+#controls button {
+  font-size: 4.8rem;
+  background: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+#sounds button {
+  width: 13.8rem;
+  height: 15.3rem;
+  font-size: 5.6rem;
+
+  border: none;
+  border-radius: 2.4rem;
+  background-color: #E1E1E6;
+  
+  cursor: pointer;
+  transition: background .3s;
+
+}
+
+#sounds button:hover {
+  background-color: #c2c2c7;
+}
+
+@media (max-width: 900px) {
+  #app {
+    flex-direction: column;
+    gap: 10rem;
+  }
+}

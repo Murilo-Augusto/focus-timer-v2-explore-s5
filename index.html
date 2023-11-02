@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Timer v2</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-svg">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script type="module" src="./src/main.js" defer></script>
+
+</head>
+<body>
+  <div id="app" class="flex">
+    <section id="timer-and-controls">
+      <div id="timer">
+        <span id="minutes">25</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+      </div>
+
+      <div id="controls" class="flex"> 
+        <button class="ph ph-play-circle" data-action="toggleRunning">
+          <span class="sr-only">Iniciar contador</span>
+        </button>
+        <button class="ph ph-stop-circle" data-action="toggleRunning">
+          <span class="sr-only">Parar contador</span>
+        </button>
+        <button class="ph ph-plus-circle secondary" data-action="reset">
+          <span class="sr-only">Incrementar minutos</span>
+        </button>
+        <button class="ph ph-minus-circle secondary" data-action="toggleMusic"> 
+          <span class="sr-only">Decrementar minutos</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="sounds">
+      <button class="ph ph-tree" data-action="toggleRunning">
+        <span class="sr-only">Iniciar som de floresta</span>
+      </button>
+      <button class="ph ph-cloud-rain" data-action="toggleRunning">
+        <span class="sr-only">Iniciar som de chuva</span>
+      </button>
+      <button class="ph ph-storefront secondary" data-action="reset">
+        <span class="sr-only">Iniciar som de cafeteria</span>
+      </button>
+      <button class="ph ph-flame secondary" data-action="toggleMusic"> 
+        <span class="sr-only">Iniciar som de lareira</span>
+      </button>
+    </section>
+
+
+  </div>
+</body>
+</html>
