@@ -5,6 +5,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Temporizador estilo pomodoro">
   <title>Focus Timer v2</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
@@ -17,39 +18,42 @@
 <body>
   <div id="app" class="flex">
     <section id="timer-and-controls">
-      <div id="timer">
+      <div id="timer" class="flex">
         <span id="minutes">25</span>
         <span>:</span>
         <span id="seconds">00</span>
       </div>
 
       <div id="controls" class="flex"> 
-        <button class="ph ph-play-circle" data-action="toggleRunning">
+        <button class="ph ph-play-circle secondary-button-control-color" data-action="toggleRunning">
           <span class="sr-only">Iniciar contador</span>
         </button>
-        <button class="ph ph-stop-circle" data-action="toggleRunning">
-          <span class="sr-only">Parar contador</span>
+        <button class="ph ph-pause-circle secondary-button-control-color" data-action="toggleRunning">
+          <span class="sr-only">Pausar contador</span>
         </button>
-        <button class="ph ph-plus-circle secondary" data-action="reset">
+        <button class="ph ph-stop-circle" data-action="reset">
+          <span class="sr-only">Reiniciar contador</span>
+        </button>
+        <button class="ph ph-plus-circle secondary" data-action="increment">
           <span class="sr-only">Incrementar minutos</span>
         </button>
-        <button class="ph ph-minus-circle secondary" data-action="toggleMusic"> 
+        <button class="ph ph-minus-circle secondary" data-action="decrement"> 
           <span class="sr-only">Decrementar minutos</span>
         </button>
       </div>
     </section>
 
     <section id="sounds">
-      <button class="ph ph-tree" data-action="toggleRunning">
+      <button class="ph ph-tree secondary-button-color" data-sound="soundTree">
         <span class="sr-only">Iniciar som de floresta</span>
       </button>
-      <button class="ph ph-cloud-rain" data-action="toggleRunning">
+      <button class="ph ph-cloud-rain secondary-button-color" data-sound="soundRain">
         <span class="sr-only">Iniciar som de chuva</span>
       </button>
-      <button class="ph ph-storefront secondary" data-action="reset">
+      <button class="ph ph-storefront secondary-button-color" data-sound="soundCoffeeShop">
         <span class="sr-only">Iniciar som de cafeteria</span>
       </button>
-      <button class="ph ph-flame secondary" data-action="toggleMusic"> 
+      <button class="ph ph-flame secondary-button-color" data-sound="soundFirePlace"> 
         <span class="sr-only">Iniciar som de lareira</span>
       </button>
     </section>

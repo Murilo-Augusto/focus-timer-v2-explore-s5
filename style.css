@@ -5,8 +5,14 @@
 }
 
 :root {
-  font-size: 62.5%
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
   
+  --bg-color: #FFFFFF;
+  --text-color: #323238;
+  --primary-color: #02799D;
+  --controls-bg-color: #E1E1E6;
+  --controls-bg-color-hover: #c2c2c7;
+
 
 }
 
@@ -24,6 +30,7 @@
 body, * {
   font-size: 1.6rem;
   font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
 }
 
 body {
@@ -31,6 +38,7 @@ body {
   place-content: center;
 
   height: 100vh;
+  background-color: var(--bg-color);
 }
 
 .flex {
@@ -42,12 +50,10 @@ body {
   gap: 19.2rem;
 }
 
-#timer span{
-  color: #323238;
+#timer span {
   font-size: 12.6rem;
   font-weight: 500;
 }
-
 
 #sounds {
   display: grid;
@@ -76,15 +82,29 @@ body {
 
   border: none;
   border-radius: 2.4rem;
-  background-color: #E1E1E6;
+  background-color: var(--controls-bg-color);
+  color: var(--text-color);
   
   cursor: pointer;
   transition: background .3s;
+}
 
+.secondary-button-sound-color {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+
+.secondary-button-control-color {
+  color: var(--primary-color);
 }
 
 #sounds button:hover {
-  background-color: #c2c2c7;
+  background-color: var(--controls-bg-color-hover);
+}
+
+.running .ph-play-circle,
+html:not(.running) .ph-pause-circle {
+  display: none;
 }
 
 @media (max-width: 900px) {
