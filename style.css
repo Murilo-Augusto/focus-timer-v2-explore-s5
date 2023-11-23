@@ -12,8 +12,6 @@
   --primary-color: #02799D;
   --controls-bg-color: #E1E1E6;
   --controls-bg-color-hover: #c2c2c7;
-
-
 }
 
 .sr-only {
@@ -90,8 +88,8 @@ body {
 }
 
 .secondary-button-sound-color {
-  background-color: var(--primary-color);
-  color: var(--bg-color);
+  background-color: var(--primary-color) !important;
+  color: var(--bg-color) !important;
 }
 
 .secondary-button-control-color {
